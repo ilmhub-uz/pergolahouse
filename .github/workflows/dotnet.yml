@@ -1,4 +1,4 @@
-name: .NET
+name: Blazor WASM Deploy
 
 on:
   push:
