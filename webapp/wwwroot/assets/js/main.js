@@ -79,8 +79,6 @@
         } else if (path[path.length - 1].length != 0) {
             window.location.replace(window.location.origin + window.location.pathname + '/' + window.location.search);
         }
-
-
     }
 })();
 
