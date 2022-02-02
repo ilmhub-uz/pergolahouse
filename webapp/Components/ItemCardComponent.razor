@@ -1,0 +1,30 @@
+<div class="col-lg-4 col-md-6 col-12">
+    <!-- Start Single Grid -->
+    <div class="single-grid wow fadeInUp" data-wow-delay=".4s">
+        <div class="image">
+            <a href="item-details.html" class="thumbnail"><img src="@(ItemModel.DetailImage)" alt="#"></a>
+        </div>
+        <div class="content">
+            <div class="top-content">
+                <a href="javascript:void(0)" class="tag">#@(ItemModel.Tag.Replace(" ", "_"))</a>
+                <h3 class="title">
+                    <a href="item-details.html">@(ItemModel.Title)</a>
+                </h3>
+                <p class="update-time">@(ItemModel.Description)</p>
+                <ul class="rating">
+                    <li><i class="lni lni-star-filled"></i></li>
+                    <li><i class="lni lni-star-filled"></i></li>
+                    <li><i class="lni lni-star-filled"></i></li>
+                    <li><i class="lni lni-star-filled"></i></li>
+                    <li><i class="lni lni-star-filled"></i></li>
+                    <li><a href="javascript:void(0)">(@(ItemModel.Likes))</a></li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <p class="price">Start From: <span>$@(ItemModel.Cost.ToString("0.00"))</span></p>
+                <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- End Single Grid -->
+</div>

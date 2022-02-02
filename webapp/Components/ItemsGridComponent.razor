@@ -1,0 +1,17 @@
+@using System.Globalization
+
+<!-- Start Items Grid Area -->
+<section class="items-grid section custom-padding">
+    <div class="container">
+        <ItemsGridHeaderComponent/>
+        <div class="single-head">
+            <div class="row">
+                @foreach (var item in ItemModels)
+                {
+                    <ItemCardComponent ItemModel="@item"></ItemCardComponent>                
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /End Items Grid Area -->

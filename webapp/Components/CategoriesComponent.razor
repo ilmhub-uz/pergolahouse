@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="cat-inner">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="category-slider">
+                    @foreach (var item in categories)
+                    {
+                        <a href="category.html" class="single-cat">
+                            <div class="icon">
+                                <img src="@item.IconImage" alt="#">
+                            </div>
+                            <h3>@item.Title</h3>
+                            <h5 class="total">@item.TotalItems</h5>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    List<SingleCategoryItem> categories =  new List<SingleCategoryItem>()
+        {
+            new SingleCategoryItem()
+            {
+                Title = "Watches",
+                IconImage = "assets/images/categories/watch.svg",
+                TotalItems = 65,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Backpacks",
+                IconImage = "assets/images/categories/travel.svg",
+                TotalItems = 15,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Gadgets",
+                IconImage = "assets/images/categories/controller.svg",
+                TotalItems = 44,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Education",
+                IconImage = "assets/images/categories/education.svg",
+                TotalItems = 19,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Fashion",
+                IconImage = "assets/images/categories/tshirt.svg",
+                TotalItems = 7,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Health & Beauty",
+                IconImage = "assets/images/categories/hospital.svg",
+                TotalItems = 4,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Education",
+                IconImage = "assets/images/categories/laptop.svg",
+                TotalItems = 42,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Real Estate",
+                IconImage = "assets/images/categories/real-estate.svg",
+                TotalItems = 34,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Jobs",
+                IconImage = "assets/images/categories/jobs.svg",
+                TotalItems = 8,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Furnetures",
+                IconImage = "assets/images/categories/furniture.svg",
+                TotalItems = 19,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Matrimony",
+                IconImage = "assets/images/categories/matrimony.svg",
+                TotalItems = 22,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Electronics",
+                IconImage = "assets/images/categories/laptop.svg",
+                TotalItems = 26,
+            },
+            new SingleCategoryItem()
+            {
+                Title = "Vehicle",
+                IconImage = "assets/images/categories/car.svg",
+                TotalItems = 14,
+            },
+
+        };
+}
