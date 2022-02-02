@@ -1,7 +1,7 @@
 namespace webapp.Components;
 
 
-public class WhyChooseUsCardComponentModel
+public class CardComponentModel
 {
     public string Title { get; set; }
 
