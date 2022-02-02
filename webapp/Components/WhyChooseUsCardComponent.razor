@@ -1,5 +1,5 @@
 <div class="col-lg-4 col-md-6 col-12">
-    @foreach (var component in CardComponents)
+    @foreach (var component in CardData)
     {
         <!-- Start Single List -->
         <div class="single-list wow fadeInUp" data-wow-delay=".2s">
@@ -11,7 +11,7 @@
 </div>
 
 @code {
-    public List<WhyChooseUsCardComponentModel> CardComponents = new List<WhyChooseUsCardComponentModel>()
+    public List<WhyChooseUsCardComponentModel> CardData = new List<WhyChooseUsCardComponentModel>()
 {
 new WhyChooseUsCardComponentModel()
 {
