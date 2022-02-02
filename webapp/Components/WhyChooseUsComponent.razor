@@ -1,0 +1,47 @@
+<div class="col-lg-4 col-md-6 col-12">
+    @foreach (var component in CardData)
+    {
+        <!-- Start Single List -->
+        <div class="single-list wow fadeInUp" data-wow-delay=".2s">
+        <i class="lni lni-book"></i>
+        <h4>@component.Title</h4>
+        <p>@component.Description</p>
+    </div>
+    }
+</div>
+
+@code {
+    public List<WhyChooseUsCardComponentModel> CardData = new List<WhyChooseUsCardComponentModel>()
+{
+new WhyChooseUsCardComponentModel()
+{
+Title = "Fully Documented",
+Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+},
+new WhyChooseUsCardComponentModel()
+{
+Title = "Clean & Modern Design",
+Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+},
+new WhyChooseUsCardComponentModel()
+{
+Title = "Completely Customizable",
+Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+},
+new WhyChooseUsCardComponentModel()
+{
+Title = "User Friendly",
+Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+},
+new WhyChooseUsCardComponentModel()
+{
+Title = "Awesome Layout",
+Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+},
+new WhyChooseUsCardComponentModel()
+{
+Title = "Fully Responsive",
+Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+},
+};
+}
