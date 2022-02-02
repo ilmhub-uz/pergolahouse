@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 p-0">
                 <div class="category-slider">
-                    @foreach (var item in categories.Categories)
+                    @foreach (var item in categories)
                     {
                         <a href="category.html" class="single-cat">
                             <div class="icon">
@@ -21,9 +21,7 @@
 
 @code
 {
-    CategoriesModel categories = new CategoriesModel()
-    {
-        Categories = new List<SingleCategoryItem>()
+    List<SingleCategoryItem> categories =  new List<SingleCategoryItem>()
         {
             new SingleCategoryItem()
             {
@@ -104,7 +102,5 @@
                 TotalItems = 14,
             },
 
-        }
-            
-    };
+        };
 }
