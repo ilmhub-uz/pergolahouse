@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Microsoft.AspNetCore.Components.dll": "sha256-AAGZqwwAjkT6Vy7taMHtC6\/86k2lLkd\/xF9QonnLlwA=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-mcCHAuMr\/XGY3tbTYDVJyWZkE7uR6OIESOn\/LMRf4Yw=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-03tPHPLltVMpajn385JsGgoMHJ6OaFd9h1TdzU8e940=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-Ph2ZOl\/LOY2cCUG\/S2iA61YUWIsDlcAHFxzdTG43rPw=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-zhFtW4kE16TdrpPne9I1Cu9o0KYzrS50VE9MVSifJg4=",
@@ -34,7 +34,7 @@
       "System.Runtime.dll": "sha256-fzubZSW6fXKHmgB2QKK6JivywcLwOu7\/nfsKsmKb2rE=",
       "System.Text.Encodings.Web.dll": "sha256-gUV2fOrOUGrNK6Oj1AxlN44sKTuN4hYA1DxX8xuRU2c=",
       "System.Text.Json.dll": "sha256-JqsfW50WFKqrjpqWUq9Ium5diNkoTKkumNONBkI3sik=",
-      "webapp.dll": "sha256-+tX\/k39GTjVdS4gqQc+uLoRoDPOOzaRvKnTjOMfypC8="
+      "webapp.dll": "sha256-dHjalR0GpGDlqvoYHUYXKqF4hmysWSHIsZ0ckT+r0Zk="
     },
     "extensions": null,
     "lazyAssembly": null,
