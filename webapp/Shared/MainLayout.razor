@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject IJSRuntime JsRuntime
 
 <!--[if lte IE 9]>
       <p class="browserupgrade">
@@ -265,3 +266,13 @@
     <a href="#" class="scroll-top btn-hover">
         <i class="lni lni-chevron-up"></i>
     </a>
+
+    @code{
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if(firstRender)
+                await JsRuntime.InvokeVoidAsync("layoutLoaded");
+
+            await base.OnAfterRenderAsync(firstRender);
+        }
+    }
