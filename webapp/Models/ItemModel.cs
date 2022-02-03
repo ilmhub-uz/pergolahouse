@@ -1,4 +1,4 @@
-namespace webapp.Model;
+namespace webapp.Models;
 
 public class ItemModel
 {
