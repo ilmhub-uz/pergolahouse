@@ -9,33 +9,33 @@ public partial class WhyChooseUsComponent : ComponentBase
     {
         new CardComponentModel()
         {
-            Title = "Fully Documented",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Честная сделка",
+            Description = "Мы предоставляем все наши услуги на основе честного и законного договора."
         },
         new CardComponentModel()
         {
-            Title = "Clean & Modern Design",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Качественная продукция",
+            Description = "Мы даем гарантию на все товары, которые мы продаем, и услуги, которые мы предоставляем."
         },
         new CardComponentModel()
         {
-            Title = "Completely Customizable",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Пунктуальность",
+            Description = "Выполним работу вовремя, в оговоренные сроки."
         },
         new CardComponentModel()
         {
-            Title = "User Friendly",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Сервисные услуги",
+            Description = "Всегда готовы предоставить необходимую помощь."
         },
         new CardComponentModel()
         {
-            Title = "Awesome Layout",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Инновационные изделия",
+            Description = "Мы используем новейшие, инновационные разработки."
         },
         new CardComponentModel()
         {
-            Title = "Fully Responsive",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Бесплатные Бонусы",
+            Description = "Замер, дизайн, доставка и установка бесплатно."
         },
     };
 
