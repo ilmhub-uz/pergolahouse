@@ -10,18 +10,18 @@ public partial class HowItWorksComponent : ComponentBase
     {
         new HowItWorksCardComponentModel()
         {
-            Title = "Aloqa o'rnatish",
-            Description = "Bizni ijtimoiy tarmoqlar yoki manzilimiz orqali topasiz."
+            Title = "Коммуникация",
+            Description = "Вы найдете нас через социальные сети или наш адрес."
         },
         new HowItWorksCardComponentModel()
         {
-            Title = "O'lchov va dizayn",
-            Description = "Manzilingizga borib o'lchaymiz va dizayn yaratamiz."
+            Title = "Мера и дизайн",
+            Description = "Мы приедем к вам, замерим и спроектируем."
         },
         new HowItWorksCardComponentModel()
         {
-            Title = "Yetkazish va o'rnatish",
-            Description = "O'zimiz manzilingizga yetkazib beramiz va bepul o'rnatib beramiz."
+            Title = "Доставка и установка",
+            Description = "Мы сами доставим по вашему адресу и бесплатно установим."
         }
     };
 }
