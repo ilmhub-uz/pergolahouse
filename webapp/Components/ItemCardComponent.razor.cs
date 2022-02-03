@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Components;
-using webapp.Model;
+using webapp.Models;
 
 namespace webapp.Components;
 
