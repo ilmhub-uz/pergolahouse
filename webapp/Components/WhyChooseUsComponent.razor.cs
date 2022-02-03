@@ -9,25 +9,25 @@ public partial class WhyChooseUsComponent : ComponentBase
     {
         new CardComponentModel()
         {
-            Icon = "lni lni-handshake",
+            Icon = "far fa-handshake",
             Title = "Честная сделка",
             Description = "Мы предоставляем все наши услуги на основе честного и законного договора."
         },
         new CardComponentModel()
         {
-            Icon = "bi bi-check-circle",
+            Icon = "fas fa-check-square",
             Title = "Качественная продукция",
             Description = "Мы даем гарантию на все товары, которые мы продаем, и услуги, которые мы предоставляем."
         },
         new CardComponentModel()
         {
-            Icon = "bi bi-clock-history",
+            Icon = "far fa-clock",
             Title = "Пунктуальность",
             Description = "Выполним работу вовремя, в оговоренные сроки."
         },
         new CardComponentModel()
         {
-            Icon = "bi bi-gear-wide-connected",
+            Icon = "fas fa-tools",
             Title = "Сервисные услуги",
             Description = "Всегда готовы предоставить необходимую помощь."
         },
@@ -39,7 +39,7 @@ public partial class WhyChooseUsComponent : ComponentBase
         },
         new CardComponentModel()
         {
-            Icon = "bi bi-gift",
+            Icon = "fas fa-donate",
             Title = "Бесплатные Бонусы",
             Description = "Замер, дизайн, доставка и установка бесплатно."
         }   
