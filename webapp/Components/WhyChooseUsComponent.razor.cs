@@ -9,33 +9,33 @@ public partial class WhyChooseUsComponent : ComponentBase
     {
         new CardComponentModel()
         {
-            Title = "Fully Documented",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Полностью задокументировано",
+            Description = "Покупайте и продавайте все, от подержанных автомобилей до мобильных телефонов и компьютеров или ищите недвижимость."
         },
         new CardComponentModel()
         {
-            Title = "Clean & Modern Design",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Чисто & Современные дизайн",
+            Description = "Покупайте и продавайте все, от подержанных автомобилей до мобильных телефонов и компьютеров или ищите недвижимость."
         },
         new CardComponentModel()
         {
-            Title = "Completely Customizable",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Полностью настраиваемый",
+            Description = "Покупайте и продавайте все, от подержанных автомобилей до мобильных телефонов и компьютеров или ищите недвижимость."
         },
         new CardComponentModel()
         {
-            Title = "User Friendly",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Дружественный интерфейс",
+            Description = "Покупайте и продавайте все, от подержанных автомобилей до мобильных телефонов и компьютеров или ищите недвижимость."
         },
         new CardComponentModel()
         {
-            Title = "Awesome Layout",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Удивительный макет",
+            Description = "Покупайте и продавайте все, от подержанных автомобилей до мобильных телефонов и компьютеров или ищите недвижимость."
         },
         new CardComponentModel()
         {
-            Title = "Fully Responsive",
-            Description = "Buy and sell everything from used cars to mobile phones and computer or search for property."
+            Title = "Полностью отзывчивый",
+            Description = "Покупайте и продавайте все, от подержанных автомобилей до мобильных телефонов и компьютеров или ищите недвижимость."
         },
     };
 

@@ -10,36 +10,36 @@ public partial class ItemsGridComponent : ComponentBase
         new ItemModel()
         {
             DetailImage = "assets/images/items-grid/img2.jpg",
-            Tag = "Real Estate",
-            Title = "Amazing Room for Rent",
-            Description = "Uzskdlsdkclsdc scdklsdc slk dck dsds ls kds d ddsdssdsdc sdscs.",
+            Tag = "Недвижимость",
+            Title = "Потрясающая комната для аренды",
+            Description = "Потрясающая квартира только для вас с современным  ремонтом, имеется много новых и развитие вещей и т.д.",
             Likes = 20,
             Cost = 300
         },
         new ItemModel()
         {
             DetailImage = "assets/images/items-grid/img2.jpg",
-            Tag = "Real Estate",
-            Title = "Amazing Room for Rent",
-            Description = "Uzskdlsdkclsdc scdklsdc slk dck dsds ls kds d ddsdssdsdc sdscs.",
+            Tag = "Недвижимость",
+            Title = "Потрясающая комната для аренды",
+            Description = "Потрясающая квартира только для вас с современным  ремонтом, имеется много новых и развитие вещей и т.д.",
             Likes = 20,
             Cost = 300
         },
         new ItemModel()
         {
             DetailImage = "assets/images/items-grid/img2.jpg",
-            Tag = "Real Estate",
-            Title = "Amazing Room for Rent",
-            Description = "Uzskdlsdkclsdc scdklsdc slk dck dsds ls kds d ddsdssdsdc sdscs.",
+            Tag = "Недвижимость",
+            Title = "Потрясающая комната для аренды",
+            Description = "Потрясающая квартира только для вас с современным ремонтом, имеется много новых и развитие вещей и т.д.",
             Likes = 20,
             Cost = 300
         },
         new ItemModel()
         {
             DetailImage = "assets/images/items-grid/img2.jpg",
-            Tag = "Real Estate",
-            Title = "Amazing Room for Rent",
-            Description = "Uzskdlsdkclsdc scdklsdc slk dck dsds ls kds d ddsdssdsdc sdscs.",
+            Tag = "Недвижимость",
+            Title = "Потрясающая комната для аренды",
+            Description = "Потрясающая квартира только для вас с современным  ремонтом, имеется много новых и развитие вещей и т.д.",
             Likes = 20,
             Cost = 300
         }
