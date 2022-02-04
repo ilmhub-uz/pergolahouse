@@ -12,5 +12,7 @@ public class ItemModel
     
     public int Likes { get; set; }
 
-    public double Cost { get; set; }    
+    public double Cost { get; set; }
+
+    public string Category { get; set; }
 }
