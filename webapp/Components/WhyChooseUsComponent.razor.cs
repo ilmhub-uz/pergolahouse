@@ -42,7 +42,7 @@ public partial class WhyChooseUsComponent : ComponentBase
             Icon = "fas fa-donate",
             Title = "Бесплатные Бонусы",
             Description = "Замер, дизайн, доставка и установка бесплатно."
-        }   
+        }
     };
 
 }
