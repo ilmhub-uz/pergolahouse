@@ -43,40 +43,43 @@
                             <h2>Связаться</h2>
                             <p>Чтобы связаться пополните эти данные и оставьте вопросы</p>
                         </div>
-                        <form class="form" method="post" action="assets/mail/mail.php">
+                        <form class="form" id="contact-form" method="POST">
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <div class="form-group">
-                                        <input name="name" type="text" placeholder="Имя и фамилия" required="required">
+                                        <input name="Fullname" id="name" type="text" placeholder="Имя и фамилия" required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="form-group">
-                                        <input name="email" type="email" placeholder="Адрес электронной почты"
+                                        <input name="Email" id="email" type="email" placeholder="Адрес электронной почты"
                                             required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="form-group">
-                                        <input name="phone" type="text" placeholder="Номер телефона"
+                                        <input name="Phone" id="phone" type="text" placeholder="Номер телефона"
                                             required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="form-group">
-                                        <input name="subject" type="text" placeholder="Тема обращения"
+                                        <input name="Subject" id="subject" type="text" placeholder="Тема обращения"
                                             required="required">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group message">
-                                        <textarea name="message" placeholder="Напишите сообщение здесь"></textarea>
+                                        <textarea name="Message" id="message" placeholder="Напишите сообщение здесь"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group button">
-                                        <button type="submit" class="btn ">Отправить</button>
+                                        <button onclick="send_mail()" type="button" value="Send" class="btn ">Отправить</button>
                                     </div>
+                                </div>
+                                <div class="col-12">
+                                    <span id="suce_message" class="text-success" style="display: none">Сообщение успешно отправлено</span>
                                 </div>
                             </div>
                         </form>
