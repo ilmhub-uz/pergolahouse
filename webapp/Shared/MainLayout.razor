@@ -20,7 +20,7 @@
 </div>
 <!-- /End Preloader -->
 
-<Header />
+<Header Categories="@Categories" />
 
 @Body
 
@@ -32,9 +32,24 @@
 </a>
 
 <!-- Invisible Component for id navigation with href -->
-<AnchorUtilsComponent />
 
 @code {
+
+    public List<ItemModel> ItemModels { get; set; } = new List<ItemModel>();
+    
+    [Inject]
+    public HttpClient Http { get; set; }
+    
+    public List<string> Categories { get; set; } = new List<string>(){"Все"};
+    
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        ItemModels = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
+        Categories.AddRange(ItemModels.Select(i => i.Category).Distinct().ToList());
+        StateHasChanged();
+    }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await JsRuntime.InvokeVoidAsync("layoutLoaded");

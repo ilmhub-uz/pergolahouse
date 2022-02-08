@@ -1,0 +1,18 @@
+[
+    {
+        "DetailImage": "assets/images/items-grid/img2.jpg",
+        "Tag": "tag",
+        "Title": "Nomi",
+        "Description": "Tavsifi",
+        "Cost": 1000.0,
+        "Category": "boshqasi"
+    },
+    {
+        "DetailImage": "assets/images/items-grid/img2.jpg",
+        "Tag": "tag",
+        "Title": "Nomi",
+        "Description": "Tavsifi",
+        "Cost": 1000.0,
+        "Category": "category"
+    }
+]

@@ -10,8 +10,6 @@ public class ItemModel
 
     public string Description { get; set; }
     
-    public int Likes { get; set; }
-
     public double Cost { get; set; }
 
     public string Category { get; set; }
