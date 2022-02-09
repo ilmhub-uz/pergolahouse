@@ -12,10 +12,8 @@ public partial class ItemsGridComponent : ComponentBase
     public string SelectedCategory { get; set; } = string.Empty;
 
     public List<string> Categories { get; set; }
+    
     public List<string> Tags { get; set; }
-    
-    
-    
 
     public List<ItemModel> ItemModels = new List<ItemModel>
     {

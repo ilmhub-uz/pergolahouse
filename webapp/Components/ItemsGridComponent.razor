@@ -1,8 +1,8 @@
 <!-- Start Items Grid Area -->
 <section class="items-grid section custom-padding">
     <div class="container">
-        <ItemsGridHeaderComponent/>
-        
+        <ItemsGridHeaderComponent />
+
         <!-- Category Dropdown Area -->
         <div class="search-form wow fadeInUp" data-wow-delay=".7s">
             <div class="row d-flex justify-content-center">
@@ -10,7 +10,8 @@
                 <div class="col-lg-3 col-md-3 col-12 p-0">
                     <div class="search-input">
                         <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
-                        <select value="@SelectedCategory" @onchange="ChangeCategory" name="category" id="product-categories">
+                        <select value="@SelectedCategory" @onchange="ChangeCategory" name="category"
+                            id="product-categories">
                             <option value="@string.Empty" selected>Все Категории</option>
                             @foreach (var category in Categories)
                             {
@@ -41,12 +42,46 @@
 
         <div class="single-head">
             <div class="row">
-                @foreach (var model in SelectedModels)
+                @if (OnFocus is not null)
                 {
-                    <ItemCardComponent ItemModel="@model" />
+                    @foreach (var model in Items)
+                    {
+                        <ItemCardComponent ItemModel="@model"></ItemCardComponent>
+                    }
+
+                }
+                else
+                {
+                    @foreach (var model in SelectedModels)
+                    {
+                        <ItemCardComponent ItemModel="@model"></ItemCardComponent>
+                    }
                 }
             </div>
         </div>
     </div>
 </section>
 <!-- End Items Grid Area -->
+
+@code {
+
+    [Parameter]
+    public string OnFocus { get; set; }
+
+    public List<ItemModel> Items { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        Items = new List<ItemModel>();
+        Items = SelectedModels.Where(i => i.Title.Contains(OnFocus) || i.Tag.Contains(OnFocus)).ToList();
+        Console.WriteLine(ItemModels);
+    }
+
+    /*protected async override Task OnParametersSetAsync()
+    {
+    Items = new List<ItemModel>();
+    Items = ItemModels.Where(i => i.Title.Contains(OnFocus) || i.Tag.Contains(OnFocus)).ToList();
+    Console.WriteLine(ItemModels);
+    }*/
+
+}
