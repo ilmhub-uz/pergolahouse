@@ -73,15 +73,11 @@
     protected async override Task OnInitializedAsync()
     {
         Items = new List<ItemModel>();
-        Items = SelectedModels.Where(i => i.Title.Contains(OnFocus) || i.Tag.Contains(OnFocus)).ToList();
+        Items = SelectedModels.Where(i => i.Title.Contains(OnFocus)
+                                        || i.Tag.Contains(OnFocus)
+                                        ||
+                                        i.Category.Contains(OnFocus)
+                                        ).ToList();
         Console.WriteLine(ItemModels);
     }
-
-    /*protected async override Task OnParametersSetAsync()
-    {
-    Items = new List<ItemModel>();
-    Items = ItemModels.Where(i => i.Title.Contains(OnFocus) || i.Tag.Contains(OnFocus)).ToList();
-    Console.WriteLine(ItemModels);
-    }*/
-
 }

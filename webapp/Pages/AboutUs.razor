@@ -28,7 +28,7 @@
             <div class="col-lg-6 col-md-12 col-12">
                 <div class="content-left wow fadeInLeft" data-wow-delay=".3s">
                     <img src="assets/images/about/choose-left.jpg" alt="#">
-                    <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
+                    <a href="https://youtu.be/erifmPXQYhs"
                         class="glightbox video"><i class="lni lni-play"></i></a>
                 </div>
             </div>
@@ -36,16 +36,10 @@
                 <!-- content-1 start -->
                 <div class="content-right wow fadeInRight" data-wow-delay=".5s">
                     <!-- Heading -->
-                    <span class="sub-heading">Об</span>
+                    <span class="sub-heading">Познакомимся</span>
                     <h2>
                         О нашей компании</h2>
-                    <p>Наша компания, производит продукцию по мировым стандартам качества. Заботясь о своей репутации,
-                        мы очень тщательно и продуманно подходим к выбору поставщиков сырья. Наши партнеры – ведущие
-                        европейские производители.</p>
-                    <h3>Что мы делаем</h3>
-                    <p>Мы служим для повышения комфорта и
-                        привлекательности вашего дома, офиса и любого здания. <br> Попробуйте честные сделки с нами,
-                        качественный товар и быстрое обслуживание!</p>
+                    <p>Компания IDS специализируется на изготовлении и реализацией современных решений в сфере автоматических раздвижных крыш "Пергола", вертикально-сдвижных автоматических окон "Гильотина", автоматических раздвижных дверей, фасадных систем, мансардных окон "VELUX", электронных замков, стеклянных офисных перегородок, стеклянных перил и козырков, душевых кабин, тентовых навес "Маркиза", кровельные материалы и многое.</p>
                 </div>
             </div>
         </div>
@@ -93,3 +87,28 @@
 <!-- Start Pricing Table Area -->
 <PricingPlanTableComponent />
 <!--/ End Pricing Table Area -->
+
+<section class="items-grid section custom-padding">
+    <div class="container">
+        <div class="single-head">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Портфолио</h2>
+                    </div>
+                </div>
+                @for (var i = 1; i < 19; i++)
+                {
+                    var src = $"assets/images/portfolio/{i}.jpg";
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-grid wow fadeInUp" data-wow-delay=".4s">
+                            <div class="image">
+                                <a class="thumbnail2"><img src="@src"></a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
