@@ -4051,6 +4051,11 @@ blockquote .shape {
   transform: scale(1.1);
 }
 
+.items-grid .single-grid:hover .image .thumbnail2 img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .items-grid .single-grid .content .top-content {
   padding: 30px 30px 25px 30px;
 }
