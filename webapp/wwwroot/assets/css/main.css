@@ -2375,6 +2375,13 @@ ol {
   border-radius: 6px;
   padding: 40px 40px;
   z-index: 2;
+  min-height: 613px;
+}
+
+.price-list-button {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
 }
 
 .pricing-table .single-table::before {
