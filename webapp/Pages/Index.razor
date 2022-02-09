@@ -1,54 +1,64 @@
 ﻿@page "/"
+@page "/{onFocus}"
 
 <!-- Start Hero Area -->
 <HeroAreaComponent />
 <!-- Start Hero Area -->
 
+@if (onFocus is not null)
+{
+    <ItemsGridComponent OnFocus="@onFocus"></ItemsGridComponent>
+}
+else
+{
 
-<!-- Start Categories Area -->
-<section class="categories">
-    <CategoriesComponent />
-</section>
-<!-- /End Categories Area -->
-
-<!-- Start Items Grid Area -->
-<ItemsGridComponent />
-<!-- Start Items Grid Area -->
+    <!-- Start Items Grid Area -->
+    <ItemsGridComponent />
+    <!-- Start Items Grid Area -->
 
 
-<!-- Start Why Choose Area -->
-<section class="why-choose section">
-    <WhyChooseUsComponent />
-</section>
-<!-- /End Why Choose Area -->
+    <!-- Start Why Choose Area -->
+    <section class="why-choose section">
+        <WhyChooseUsComponent />
+    </section>
+    <!-- /End Why Choose Area -->
 
-<!-- Start Call Action Area -->
-<section class="call-action overlay section">
-    <div class="container">
-        <div class="row ">
-            <div class="col-lg-8 offset-lg-2 col-12">
-                <div class="inner">
-                    <div class="content">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Находясь в постоянном круговороте рутинных дел и рабочих будней, мы часто забываем о самом главном – о семье. 
-                        </h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">А ведь это так важно – проводить время в кругу родных и близких. Такой досуг не только приносит удовольствие
-                            и душевное тепло, но и сближает членов семьи друг с другом, помогает решить множество вопросов
-                            и на время забыть о всех проблемах.</p>
-                        <div class="button wow fadeInUp" data-wow-delay=".8s">
-                            <a href="javascript:void(0)" class="btn">Приобрести сейчас</a>
+    <!-- Start Call Action Area -->
+    <section class="call-action overlay section">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <div class="inner">
+                        <div class="content">
+                            <h2 class="wow fadeInUp" data-wow-delay=".4s">Находясь в постоянном круговороте рутинных дел и
+                                рабочих будней, мы часто забываем о самом главном – о семье.
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay=".6s">А ведь это так важно – проводить время в кругу
+                                родных и близких. Такой досуг не только приносит удовольствие
+                                и душевное тепло, но и сближает членов семьи друг с другом, помогает решить множество
+                                вопросов
+                                и на время забыть о всех проблемах.</p>
+                            <div class="button wow fadeInUp" data-wow-delay=".8s">
+                                <a href="javascript:void(0)" class="btn">Приобрести сейчас</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- End Call Action Area -->
+    </section>
+    <!-- End Call Action Area -->
 
-<!-- Start Pricing Table Area -->
-<PricingPlanTableComponent />
-<!--/ End Pricing Table Area -->
+    <!-- Start Pricing Table Area -->
+    <PricingPlanTableComponent />
+    <!--/ End Pricing Table Area -->
 
-<!-- Start How Works Area -->
-<HowItWorksComponent />
-<!-- End How Works Area -->
+    <!-- Start How Works Area -->
+    <HowItWorksComponent />
+    <!-- End How Works Area -->
+}
+
+@code {
+    [Parameter]
+    public string onFocus { get; set; }
+}
