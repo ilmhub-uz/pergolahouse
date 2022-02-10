@@ -32,11 +32,25 @@
 </a>
 
 @code {
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    public List<ItemModel> ItemModels { get; set; } = new List<ItemModel>();
+    
+    [Inject]
+    public HttpClient Http { get; set; }
+    
+    public List<string> Categories { get; set; } = new List<string>(){};
+    
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        ItemModels = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
+        Categories.AddRange(ItemModels.Select(i => i.Category).Distinct().ToList());
+        StateHasChanged();
+    }
+
+     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await JsRuntime.InvokeVoidAsync("layoutLoaded");
         await base.OnAfterRenderAsync(firstRender);
     }
-
-    
 }

@@ -23,7 +23,10 @@
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed">Категории</a>
                                     <ul class="sub-menu collapse">
-
+                                        @foreach (var item in Categories)
+                                        {
+                                            <li class="nav-item"><a href="categories/@item" >@item</a></li>
+                                        }
                                     </ul>
                                 </li>
                                 <li class="nav-item">
