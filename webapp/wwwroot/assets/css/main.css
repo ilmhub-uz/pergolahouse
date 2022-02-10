@@ -29,7 +29,7 @@ p {
 }
 
 .brbalo {
-  height: 200px;
+  height: 240px;
 }
 
 .navbar-toggler:focus,
@@ -6705,4 +6705,8 @@ blockquote .shape {
 
 .video-modal .modal-content {
   border: 0;
+}
+
+.buy-item-button:hover {
+  cursor: pointer;
 }
