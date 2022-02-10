@@ -14,6 +14,6 @@ public partial class Header : ComponentBase
 
     public void Navigate(string category)
     {
-        NavigationManager.NavigateTo("/categories/" + category);
+        NavigationManager.NavigateTo("/categories/" + category, forceLoad:true);
     }
 } 
