@@ -13,8 +13,6 @@ public partial class ItemCardComponent : ComponentBase
     [Inject]
     public ISyncLocalStorageService LocalStorageService { get; set; }
 
-    const string LocalTableName = "Liked";
-
     public void ChangeToLike(string id)
     {
         LocalStorageService.SetItem(id, ItemModel.ToString());

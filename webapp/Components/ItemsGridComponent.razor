@@ -1,3 +1,4 @@
+@using System.Text.Json
 <!-- Start Items Grid Area -->
 <section class="items-grid section custom-padding">
     <div class="container">
@@ -30,13 +31,22 @@
     [Parameter]
     public string OnFocus { get; set; }
 
+    [Inject]
+    public HttpClient Http { get; set; }
+    
     [Parameter]
-    public List<ItemModel> ItemModels { get; set; }
+    public List<int> SelectedIndexes { get; set; }
+
+    
+    public List<ItemModel> ItemModels { get; set; } = new List<ItemModel>();
+
 
     public List<ItemModel> Items { get; set; } = new List<ItemModel>();
 
     protected async override Task OnInitializedAsync()
     {
+        ItemModels = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
+        
         if(OnFocus != null)
         {
             Items = ItemModels.Where(i => i.Title.Contains(OnFocus)
@@ -44,7 +54,13 @@
             ||
             i.Category.Contains(OnFocus)
             ).ToList();
-            Console.WriteLine(ItemModels);
+        }
+        else if(SelectedIndexes is not null)
+        {
+            foreach (var item in SelectedIndexes)
+            {
+                Items.Add(ItemModels.First(i => i.Id == item));
+            }
         }
         else
         {

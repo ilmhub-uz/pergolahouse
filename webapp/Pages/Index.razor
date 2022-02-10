@@ -8,7 +8,7 @@
 @if (onFocus is not null)
 {
     <div id="items-grid-area-id">
-        <ItemsGridComponent ItemModels="@ItemModels" OnFocus="@onFocus" />
+        <ItemsGridComponent OnFocus="@onFocus" />
     </div>
 }
 else
@@ -16,7 +16,7 @@ else
 
     <!-- Start Items Grid Area -->
     <div id="items-grid-area-id">
-        <ItemsGridComponent ItemModels="@ItemModels" />
+        <ItemsGridComponent />
     </div>
     <!-- Start Items Grid Area -->
 
@@ -25,7 +25,7 @@ else
     <section class="why-choose section">
         <WhyChooseUsComponent />
     </section>
-    <!-- /End Why Choose Area -->
+    <!-- End Why Choose Area -->
 
     <!-- Start Call Action Area -->
     <section class="call-action overlay section">

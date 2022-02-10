@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Json;
+using System.Text.Json;
 using Microsoft.AspNetCore.Components;
 using webapp.Models;
 
@@ -14,7 +15,6 @@ public partial class Index : ComponentBase
     protected override async Task OnInitializedAsync()
     {
         ItemModels = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
-        
         StateHasChanged();
     }
 } 
