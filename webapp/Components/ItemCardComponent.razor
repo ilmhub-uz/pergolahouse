@@ -6,14 +6,14 @@
         </div>
         <div class="content">
             <div class="top-content brbalo">
-                <a href="javascript:void(0)" class="tag">#@(ItemModel.Tag.Replace(" ", "_"))</a>
+                <a class="" >#@(ItemModel.Tag.Replace(" ", "_"))</a>
                 <h3 class="title">
-                    <a href="item-details.html">@(ItemModel.Title)</a>
+                    <a class="buy-item-button" @onclick="NavigateToContactUs">@(ItemModel.Title)</a>
                 </h3>
                 <p class="update-time">@(ItemModel.Description)</p>
             </div>
             <div class="bottom-content">
-                <p class="price">Начинается с: <span>$@(ItemModel.Cost.ToString("0.00"))</span></p>
+                <p class="price">Начинается с: <span>$@(ItemModel.Cost.ToString("0.00")) / @ItemModel.UnitOfMeasurement</span></p>
                 @if(LocalStorageService.ContainKey(ItemModel.Id.ToString()))
                 {
                     <button class="like change-like-status" @onclick="() => ChangeToUnlike(ItemModel.Id.ToString())"><i class="lni lni-heart"></i></button>
