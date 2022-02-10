@@ -2,6 +2,8 @@ namespace webapp.Models;
 
 public class ItemModel
 {
+    public int Id { get; set; }
+    
     public string DetailImage { get; set; }
 
     public string Tag { get; set; }

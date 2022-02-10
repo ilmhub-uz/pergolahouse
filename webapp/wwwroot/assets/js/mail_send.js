@@ -17,7 +17,7 @@ function send_mail() {
 
     if (email == "") {
         jQuery("#email").addClass('invalid');
-        jQuery("#val_user_email").html("Please Enter Email");
+        jcategories/boshqasiQuery("#val_user_email").html("Please Enter Email");
         flag = 1;
     } else if (!email.match(mailformat)) {
         jQuery("#email").addClass('invalid');

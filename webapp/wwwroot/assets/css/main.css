@@ -4331,11 +4331,17 @@ blockquote .shape {
 }
 
 .items-grid .single-grid .content .bottom-content .price span {
-  color: #5830E0;
+  color: #5830E0; 
   font-weight: 700;
   font-size: 18px;
   display: inline-block;
   margin-left: 5px;
+}
+
+.change-like-status {
+  color: #fff !important;
+  background: #5830E0 !important;
+  border-color: transparent !important;
 }
 
 .items-grid .single-grid .content .bottom-content .like {
@@ -4356,6 +4362,12 @@ blockquote .shape {
   background: #5830E0;
   border-color: transparent;
 }
+
+/* .change-like-status:hover {
+  color: #5830E0 !important;
+  background: #fff !important;
+  border-color: transparent !important;
+} */
 
 /*======================================
     Newsletter CSS
@@ -6661,4 +6673,8 @@ blockquote .shape {
   color: #fff;
   background: #5830E0;
   border-color: transparent;
+}
+
+.card-item-component{
+  /* min-height: 650px; */
 }
