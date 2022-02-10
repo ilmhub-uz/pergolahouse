@@ -6683,3 +6683,22 @@ blockquote .shape {
 .card-item-component{
   /* min-height: 650px; */
 }
+
+.video-modal .btn-close {
+  height: 35px;
+  width: 35px;
+  background-image: none;
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: -35px;
+  color: var(--WHITE);
+  font-size: 16px;
+  padding: 0;
+}
+
+.video-modal .modal-content {
+  border: 0;
+}
