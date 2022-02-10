@@ -28,6 +28,10 @@ p {
   padding: 0;
 }
 
+.brbalo {
+  height: 200px;
+}
+
 .navbar-toggler:focus,
 a:focus,
 .AnchorLink:focus,
