@@ -1,44 +1,8 @@
+@using System.Text.Json
 <!-- Start Items Grid Area -->
 <section class="items-grid section custom-padding">
     <div class="container">
         <ItemsGridHeaderComponent />
-
-        <!-- Category Dropdown Area -->
-        <div class="search-form wow fadeInUp" data-wow-delay=".7s">
-            <div class="row d-flex justify-content-center">
-                <!-- Select Category Area -->
-                <div class="col-lg-3 col-md-3 col-12 p-0">
-                    <div class="search-input">
-                        <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
-                        <select value="@SelectedCategory" @onchange="ChangeCategory" name="category"
-                            id="product-categories">
-                            <option value="@string.Empty" selected>Все Категории</option>
-                            @foreach (var category in Categories)
-                            {
-                                <option value="@category">@category</option>
-                            }
-                        </select>
-                    </div>
-                </div>
-                <!-- End Select Category Area -->
-
-                <!-- Select Tag Area -->
-                <div class="col-lg-3 col-md-3 col-12 p-0">
-                    <div class="search-input">
-                        <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
-                        <select name="category" value="@SelectedTag" @onchange="ChangeTag" id="product-tags">
-                            <option value="@string.Empty" selected>Все Теги</option>
-                            @foreach (var tag in Tags)
-                            {
-                                <option value="@tag">@tag</option>
-                            }
-                        </select>
-                    </div>
-                </div>
-                <!-- End Select Tag Area -->
-            </div>
-        </div>
-        <!-- End Category Dropdown Area -->
 
         <div class="single-head">
             <div class="row">
@@ -51,7 +15,7 @@
                 }
                 else
                 {
-                    @foreach (var model in SelectedModels)
+                    @foreach (var model in Items)
                     {
                         <ItemCardComponent ItemModel="@model" />
                     }
@@ -67,16 +31,40 @@
     [Parameter]
     public string OnFocus { get; set; }
 
-    public List<ItemModel> Items { get; set; }
+    [Inject]
+    public HttpClient Http { get; set; }
+    
+    [Parameter]
+    public List<int> SelectedIndexes { get; set; }
+
+    
+    public List<ItemModel> ItemModels { get; set; } = new List<ItemModel>();
+
+
+    public List<ItemModel> Items { get; set; } = new List<ItemModel>();
 
     protected async override Task OnInitializedAsync()
     {
-        Items = new List<ItemModel>();
-        Items = SelectedModels.Where(i => i.Title.Contains(OnFocus)
-        || i.Tag.Contains(OnFocus)
-        ||
-        i.Category.Contains(OnFocus)
-        ).ToList();
-        Console.WriteLine(ItemModels);
+        ItemModels = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
+        
+        if(OnFocus != null)
+        {
+            Items = ItemModels.Where(i => i.Title.Contains(OnFocus)
+            || i.Tag.Contains(OnFocus)
+            ||
+            i.Category.Contains(OnFocus)
+            ).ToList();
+        }
+        else if(SelectedIndexes is not null)
+        {
+            foreach (var item in SelectedIndexes)
+            {
+                Items.Add(ItemModels.First(i => i.Id == item));
+            }
+        }
+        else
+        {
+            Items = ItemModels;
+        }
     }
 }
