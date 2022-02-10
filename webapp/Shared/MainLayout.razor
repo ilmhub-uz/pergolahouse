@@ -1,4 +1,5 @@
-﻿@inherits LayoutComponentBase
+﻿@using System.Text.Json
+@inherits LayoutComponentBase
 @inject IJSRuntime JsRuntime
 
 <!--[if lte IE 9]>
@@ -44,6 +45,11 @@
     protected override async Task OnInitializedAsync()
     {
         ItemModels = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
+        foreach (var item in ItemModels)
+        {
+            Console.WriteLine($"{JsonSerializer.Serialize(item)} oq'ildi");
+            
+        }
         Categories.AddRange(ItemModels.Select(i => i.Category).Distinct().ToList());
         StateHasChanged();
     }

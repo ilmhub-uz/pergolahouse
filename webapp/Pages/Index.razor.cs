@@ -11,13 +11,10 @@ public partial class Index : ComponentBase
     [Inject]
     public HttpClient Http { get; set; }
 
-    public List<string> Categories { get; set; } = new List<string>();
-
-
-
     protected override async Task OnInitializedAsync()
     {
         ItemModels = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
+        
         StateHasChanged();
     }
 } 

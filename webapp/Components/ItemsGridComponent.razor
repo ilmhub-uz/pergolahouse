@@ -30,16 +30,25 @@
     [Parameter]
     public string OnFocus { get; set; }
 
-    public List<ItemModel> Items { get; set; }
+    [Parameter]
+    public List<ItemModel> ItemModels { get; set; }
+
+    public List<ItemModel> Items { get; set; } = new List<ItemModel>();
 
     protected async override Task OnInitializedAsync()
     {
-        Items = new List<ItemModel>();
-        Items = ItemModels.Where(i => i.Title.Contains(OnFocus)
-        || i.Tag.Contains(OnFocus)
-        ||
-        i.Category.Contains(OnFocus)
-        ).ToList();
-        Console.WriteLine(ItemModels);
+        if(OnFocus != null)
+        {
+            Items = ItemModels.Where(i => i.Title.Contains(OnFocus)
+            || i.Tag.Contains(OnFocus)
+            ||
+            i.Category.Contains(OnFocus)
+            ).ToList();
+            Console.WriteLine(ItemModels);
+        }
+        else
+        {
+            Items = ItemModels;
+        }
     }
 }
