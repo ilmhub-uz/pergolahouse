@@ -7,13 +7,13 @@
 
 @if (onFocus is not null)
 {
-    <ItemsGridComponent OnFocus="@onFocus"></ItemsGridComponent>
+    <ItemsGridComponent OnFocus="@onFocus" ItemModels="@ItemModels"></ItemsGridComponent>
 }
 else
 {
 
     <!-- Start Items Grid Area -->
-    <ItemsGridComponent />
+    <ItemsGridComponent ItemModels="@ItemModels"/>
     <!-- Start Items Grid Area -->
 
 

@@ -20,7 +20,7 @@
 </div>
 <!-- /End Preloader -->
 
-<Header />
+<Header Categories="@Categories" />
 
 @Body
 
@@ -37,4 +37,6 @@
         await JsRuntime.InvokeVoidAsync("layoutLoaded");
         await base.OnAfterRenderAsync(firstRender);
     }
+
+    
 }
