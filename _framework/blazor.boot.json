@@ -8,7 +8,7 @@
   "resources": {
     "assembly": {
       "Blazored.LocalStorage.dll": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
-      "Microsoft.AspNetCore.Components.dll": "sha256-ilLqzO5OyxkHs2pYk3IXkQQB+\/7ggTRj4ri\/opALa\/A=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-wmaIRvXUFqZtb5iHUAdFquBI86CdO898fZVaAfVWUcA=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-dTaqEq48OLRdF11Rv6garMUxPlggvwWUK9Q\/LrNOG28=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-Ph2ZOl\/LOY2cCUG\/S2iA61YUWIsDlcAHFxzdTG43rPw=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-zhFtW4kE16TdrpPne9I1Cu9o0KYzrS50VE9MVSifJg4=",
@@ -39,7 +39,7 @@
       "System.Text.Json.dll": "sha256-mS91Tdq8c7RI5z7tRoouVWdS5Z8HzRjwNvWF+RyWUL8=",
       "System.Text.RegularExpressions.dll": "sha256-6dAiKH2V0dzezYnv7g8k6WVWrJbmIFwB\/H2mmMVovgQ=",
       "System.Threading.dll": "sha256-8JwNZN18c56BxSpK0JIkNrrthAhuFNql98cF5Q38KNo=",
-      "webapp.dll": "sha256-0+5U4mTM6oWe980jQz00RjZYgu0Eg2uTgAqoSjad9Fk="
+      "webapp.dll": "sha256-reeI1RR9+wu6Wu4QtYUgclDQhsHk5vAJiy00SXuZaHU="
     },
     "extensions": null,
     "lazyAssembly": null,
