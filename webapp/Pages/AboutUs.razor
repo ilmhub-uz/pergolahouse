@@ -1,4 +1,5 @@
 @page "/aboutus"
+@inject IJSRuntime JsRuntime
 
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
@@ -28,7 +29,7 @@
             <div class="col-lg-6 col-md-12 col-12">
                 <div class="content-left wow fadeInLeft" data-wow-delay=".3s">
                     <img src="assets/images/about/choose-left.jpg" alt="#">
-                    <a href="https://youtu.be/erifmPXQYhs"
+                    <a data-bs-toggle="modal" data-bs-target="#video-modal"
                         class="glightbox video"><i class="lni lni-play"></i></a>
                 </div>
             </div>
@@ -45,6 +46,23 @@
         </div>
     </div>
 </section>
+<div class="modal fade video-modal js-course-preview-modal" id="video-modal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="ratio ratio-16x9">
+                    <video controls="controls" class="js-course-preview-video">
+                        <source src="assets/Pergola.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- End About Area -->
 
 <!-- Start How Works Area -->
@@ -112,3 +130,12 @@
         </div>
     </div>
 </section>
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JsRuntime.InvokeVoidAsync("coursePreviewVideo");
+        await base.OnAfterRenderAsync(firstRender);
+    }
+}
