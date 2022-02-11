@@ -8,7 +8,8 @@
             <div class="top-content brbalo">
                 <a class="" >#@(ItemModel.Tag.Replace(" ", "_"))</a>
                 <h3 class="title">
-                    <a class="buy-item-button" @onclick="NavigateToContactUs">@(ItemModel.Title)</a>
+                    <a class="buy-item-button" href="/contactus">@(ItemModel.Title)</a>
+                    @* <a class="buy-item-button" @onclick="NavigateToContactUs">@(ItemModel.Title)</a> *@
                 </h3>
                 <p class="update-time">@(ItemModel.Description)</p>
             </div>

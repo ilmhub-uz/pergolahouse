@@ -2,7 +2,14 @@
 <!-- Start Items Grid Area -->
 <section class="items-grid section custom-padding">
     <div class="container">
-        <ItemsGridHeaderComponent />
+        @if(Items.Count == 0)
+        {
+            <ItemsNotFoundComponent />
+        }
+        else
+        {
+            <ItemsGridHeaderComponent />
+        }
 
         <div class="single-head">
             <div class="row">
@@ -66,5 +73,6 @@
         {
             Items = ItemModels;
         }
+        StateHasChanged();
     }
 }
