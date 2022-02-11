@@ -6711,7 +6711,17 @@ blockquote .shape {
   cursor: pointer;
 }
 
-.category-hover-button:hover + .category-display-change {
+/* .category-hover-button:hover + .category-display-change {
   display: block !important;
   visibility: visible !important;
+} */
+
+.category-display-block {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.category-display-none {
+  display: none !important;
+  visibility: hidden !important;
 }
