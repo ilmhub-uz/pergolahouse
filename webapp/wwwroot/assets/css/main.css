@@ -1463,6 +1463,10 @@ ol {
 }
 
 /*===== NAVBAR =====*/
+.but1466
+{
+  display: block !important;
+}
 .navbar-area {
   position: absolute;
   top: 0;
