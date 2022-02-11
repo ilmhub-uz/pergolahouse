@@ -60,7 +60,7 @@ function send_mail() {
     jQuery.ajax({
         type: "POST",
         crossOrigin: true,
-        url: "https://script.google.com/macros/s/AKfycbxGzgnEKlWLWl68ER4OV-YL1cUT-tlW969qVAB4ndZAPNBN-zHjC2kEzc-69yWFHU_N/exec",
+        url: "https://script.google.com/macros/s/AKfycbyBLXdd0dBGz9f_Qe_W_R_lj6ut1dmUF7CzAA_IcPZNxEscmuLFTzUS2y234JPJhXA/exec",
         data: data,
         success: function(response) {
             if (response == '1') {
