@@ -1,8 +1,26 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@inject HttpClient Http
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
     </Found>
     <NotFound>
-        
+        <Header Categories="@Categories"/>
+        <NotFoundComponent/>
+        <Footer/>
     </NotFound>
 </Router>
+
+@code {
+    public List<ItemModel> ItemModels { get; set; } = new List<ItemModel>();
+        
+    public List<string> Categories { get; set; } = new List<string>(){};
+    
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        ItemModels = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
+        Categories.AddRange(ItemModels.Select(i => i.Category).Distinct().ToList());
+        StateHasChanged();
+    }
+}

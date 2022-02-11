@@ -1,0 +1,19 @@
+@inject NavigationManager NavigationManager
+<div id="notfound">
+    <div class="notfound">
+        <div class="notfound-404">
+            <h1>:(</h1>
+        </div>
+        <h2>404 - Страница не найдена</h2>
+        <p>Страница, которую вы ищете, не существует</p>
+        <a @onclick="toHome" style="color: white;">Главная</a>
+    </div>
+</div>
+
+@code
+{
+    public void toHome()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}
