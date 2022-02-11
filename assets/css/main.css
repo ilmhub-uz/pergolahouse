@@ -6710,3 +6710,8 @@ blockquote .shape {
 .buy-item-button:hover {
   cursor: pointer;
 }
+
+.category-hover-button:hover + .category-display-change {
+  display: block !important;
+  visibility: visible !important;
+}
