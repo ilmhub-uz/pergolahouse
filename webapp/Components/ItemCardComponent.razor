@@ -13,7 +13,14 @@
                 <p class="update-time">@(ItemModel.Description)</p>
             </div>
             <div class="bottom-content">
-                <p class="price">Начинается с: <span>$@(ItemModel.Cost.ToString("0.00")) / @ItemModel.UnitOfMeasurement</span></p>
+                @if(ItemModel.Id == 18)
+                {
+                    <p class="price">Цена Договорная</p>
+                }
+                else
+                {
+                    <p class="price">Начинается с: <span>$@(ItemModel.Cost.ToString("0.00")) / @ItemModel.UnitOfMeasurement</span></p>
+                }
                 @if(LocalStorageService.ContainKey(ItemModel.Id.ToString()))
                 {
                     <button class="like change-like-status" @onclick="() => ChangeToUnlike(ItemModel.Id.ToString())"><i class="lni lni-heart"></i></button>
