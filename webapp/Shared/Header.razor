@@ -21,13 +21,16 @@
                                     <a href="/">Главная</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dd-menu collapsed category-hover-button">Категории</a>
-                                    <ul class="sub-menu collapse category-display-change">
-                                        @foreach (var item in Categories)
-                                        {
-                                            <li class="nav-item"><a @onclick="() => Navigate(item)">@item</a></li>
-                                        }
-                                    </ul>
+                                    <a class="dd-menu collapsed" @onclick="ChangeVisibilityStatus">Категории</a>
+                                    @if(VisibilityStatus)
+                                    {
+                                        <ul class="sub-menu collapse">
+                                            @foreach (var item in Categories)
+                                            {
+                                                <li class="nav-item"><a @onclick="() => Navigate(item)">@item</a></li>
+                                            }
+                                        </ul>
+                                    }
                                 </li>
                                 <li class="nav-item">
                                     <a href="aboutus">О нас</a>
