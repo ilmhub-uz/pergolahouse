@@ -27,6 +27,6 @@
     private void OnFocusing()
     {
         OnFocus = SearchWords;
-        NavigationManager.NavigateTo($"/{OnFocus}", forceLoad:true);
+        NavigationManager.NavigateTo($"/search/{OnFocus}", forceLoad:true);
     }
 }
