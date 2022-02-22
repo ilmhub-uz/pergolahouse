@@ -3,7 +3,7 @@
 
 <!-- Start Items Grid Area -->
 <div id="items-grid-area-id">
-    <ItemsGridComponent SelectedIndexes="@ReadyModels" />
+    <ItemsGridComponent Items="@ReadyModels" />
 </div>
 <!-- Start Items Grid Area -->
 
@@ -11,19 +11,19 @@
 @code
 {
     [Parameter]
-    public string Category { get; set; } 
+    public string Category { get; set; }
 
     public List<ItemModel> ItemModels { get; set; } = new List<ItemModel>();
 
     [Inject]
     public HttpClient Http { get; set; }
 
-    public List<int> ReadyModels { get; set; } = new List<int>();
+    public List<ItemModel> ReadyModels { get; set; } = new List<ItemModel>();
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
         ItemModels = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
-        ReadyModels = ItemModels.Where(i => i.Category == Category).Select(i => i.Id).ToList();
+        ReadyModels = ItemModels.Where(i => i.Category == Category).ToList();
         StateHasChanged();
     }
 }

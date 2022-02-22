@@ -12,7 +12,7 @@
         </div>
         <div class="col-lg-2 col-md-2 col-12 p-0">
             <div class="search-btn button">
-                <button class="btn" @onclick="OnFocusing"><i class="lni lni-search-alt"></i> Поиск</button>
+                <a class="btn" href="search/@SearchWords"><i class="lni lni-search-alt"></i> Поиск</a>
             </div>
         </div>
     </div>
@@ -24,9 +24,9 @@
 
     public string OnFocus { get; set; }
 
-    private void OnFocusing()
-    {
-        OnFocus = SearchWords;
-        NavigationManager.NavigateTo($"/search/{OnFocus}", forceLoad:true);
-    }
+    // private void OnFocusing()
+    // {
+    //     OnFocus = SearchWords;
+    //     NavigationManager.NavigateTo($"/search/{OnFocus}", forceLoad:true);
+    // }
 }
