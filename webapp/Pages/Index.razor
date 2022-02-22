@@ -76,10 +76,9 @@ else
         }
         else
         {
-            Items = ItemModels.Where(i => i.Title.Contains(OnFocus)
-                    || i.Tag.Contains(OnFocus)
-                    ||
-                    i.Category.Contains(OnFocus)
+            Items = ItemModels.Where(i => i.Title.ToUpper().Contains(OnFocus.ToUpper())
+                    || i.Tag.ToUpper().Contains(OnFocus.ToUpper())
+                    || i.Category.ToUpper().Contains(OnFocus.ToUpper())
                     ).ToList();
         }
     }
