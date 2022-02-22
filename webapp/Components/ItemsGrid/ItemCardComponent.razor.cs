@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components;
 using webapp.Models;
 using Blazored.LocalStorage;
 
-namespace webapp.Components;
+namespace webapp.Components.ItemsGrid;
 
 public partial class ItemCardComponent : ComponentBase
 {

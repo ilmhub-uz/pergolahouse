@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 
-namespace webapp.Components;
+namespace webapp.Components.WhyChooseUs;
 
 public partial class WhyChooseUsComponent : ComponentBase
 {
