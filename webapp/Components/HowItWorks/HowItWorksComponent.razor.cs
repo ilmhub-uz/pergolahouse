@@ -2,7 +2,7 @@ using System.ComponentModel;
 using Microsoft.AspNetCore.Components;
 using webapp.Models;
 
-namespace webapp.Components;
+namespace webapp.Components.HowItWorks;
 
 public partial class HowItWorksComponent : ComponentBase
 {
