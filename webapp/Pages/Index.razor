@@ -5,10 +5,10 @@
 <HeroAreaComponent />
 <!-- Start Hero Area -->
 
-@if (onFocus is not null)
+@if (OnFocus is not null)
 {
     <div id="items-grid-area-id">
-        <ItemsGridComponent OnFocus="@onFocus" />
+        <ItemsGridComponent Items="@Items" />
     </div>
 }
 else
@@ -16,7 +16,7 @@ else
 
     <!-- Start Items Grid Area -->
     <div id="items-grid-area-id">
-        <ItemsGridComponent />
+        <ItemsGridComponent Items="@Items"/>
     </div>
     <!-- Start Items Grid Area -->
 
@@ -64,5 +64,23 @@ else
 
 @code {
     [Parameter]
-    public string onFocus { get; set; }
+    public string OnFocus { get; set; }
+    public List<ItemModel> Items { get; set; }
+    
+    
+    protected override async Task OnParametersSetAsync()
+    {
+        if(OnFocus is null)
+        {
+            Items = await Http.GetFromJsonAsync<List<ItemModel>>("data/data.json");
+        }
+        else
+        {
+            Items = ItemModels.Where(i => i.Title.Contains(OnFocus)
+                    || i.Tag.Contains(OnFocus)
+                    ||
+                    i.Category.Contains(OnFocus)
+                    ).ToList();
+        }
+    }
 }
